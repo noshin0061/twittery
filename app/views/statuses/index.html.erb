@@ -1,0 +1,16 @@
+<div class="mb-4">
+  <%= link_to 'ツイート', new_status_path, class: 'btn btn-primary' %>
+</div>
+
+<div class="statuses">
+  <% @statuses.each do |status| %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <p class="card-text"><%= status.content %></p>
+        <div class="btn-group">
+          <%= link_to '詳細', status_path(status), class: 'btn btn-outline-primary btn-sm' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
